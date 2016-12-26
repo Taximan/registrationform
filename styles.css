@@ -1,0 +1,168 @@
+body { 
+  font-family: 'Roboto';
+}
+
+button {
+  user-select: none;
+}
+
+.register-page {
+  min-height: 100vh;
+  background-color:#673AB7;
+  color: #eee;
+}
+
+.register-page-content {
+  max-width: 300px;
+  min-height: 70vh;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.register-page-title {
+  font-family: 'Pacifico';
+}
+
+.register-form {
+  margin-top: 12px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  position: relative;
+}
+
+.register-form label {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  margin-bottom: -1px;
+  margin-top: 12px;
+}
+.register-form input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  margin-bottom: 7px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.register-form button[type="submit"] {
+  margin-top: 20px;
+  background-color: #E91E63;
+  color: #eee;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  align-self: center;
+  position: relative;
+}
+
+
+.register-form button[type="submit"]:hover,  .register-form button[type="submit"]:focus{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  z-index: 999;
+}
+
+.loading-indicator {
+  background-color: rgba(93, 93, 93, 0.7);
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-indicator.is-visiable {
+  display: flex;
+}
+
+.form-message {
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  animation: 600ms jello ease-in-out;
+  transform-origin: center;
+}
+
+.form-message.is-visiable {
+  display: flex !important;
+}
+
+.form-message-text {
+  font-size: 1.3em;
+  margin-top: 12px;
+}
+
+.form-message-action {
+  position: relative;
+  margin-top: 19px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid white;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.form-message-success {
+  background-color: #009688;
+}
+
+.form-message-fail {
+  background-color:#F44336;
+}
+
+
+
+@keyframes jello {
+  from, 11.1%, to {
+    transform: none;
+  }
+
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}

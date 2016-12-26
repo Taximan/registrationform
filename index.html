@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Sign in</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./spinner.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="register-page">
+    <div class="register-page-content">
+      <h1 class="register-page-title">Sign in</h1>
+      <form action="#" class="register-form">
+        <div class="overlay loading-indicator">
+          <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+          </svg>
+        </div>
+        <div class="overlay form-message form-message-success">
+          <svg fill="#fff" height="62" viewBox="0 0 24 24" width="62" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"
+            />
+          </svg>
+          <div class="form-messag-text form-message-success-text">Account created successfully!</div>
+          <button class="form-message-action form-message-success-action">One more?<link class="rippleJS" /></button>
+        </div>
+
+        <div class="overlay form-message form-message-fail">
+          <svg fill="#fff" height="62" viewBox="0 0 24 24" width="62" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+          </svg>
+          <div class="form-message-text form-message-fail-text">Passwords don't match!</div>
+          <button class="form-message-action form-message-fail-action">Try again?<link class="rippleJS" /></button>
+        </div>
+
+        <label for="register-form-username-field">username</label>
+        <input type="text" id="register-form-username-field" />
+        <label for="register-form-password-field">password</label>
+        <input type="password" id="register-form-password-field" />
+        <label for="register-form-password-confirm-field">password confirm</label>
+        <input type="password" id="register-form-password-confirm-field" />
+        <button type="submit">Create Account <link class="rippleJS" /></button>
+      </form>
+    </div>
+  </div>
+  <script src="./rippleeffect.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
